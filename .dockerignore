@@ -5,6 +5,9 @@
 # Docker
 .docker
 
+# vscode settings
+.vscode
+
 # Python
 app/__pycache__/
 app/*/__pycache__/
