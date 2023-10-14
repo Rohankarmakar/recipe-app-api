@@ -1,7 +1,4 @@
 """Tests for User Api."""
-import email
-from venv import create
-from xml.dom import UserDataHandler
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.urls import reverse
@@ -39,7 +36,8 @@ class PublicUserApiTest(TestCase):
         self.assertNotIn('password', res.data)  # type: ignore
 
     def test_user_not_created_with_existing_email(self):
-        """Tests if user is not created with same email which already exists in the database."""
+        """Tests if user is not created with same
+          email which already exists in the database."""
 
         payload = {
             'email': 'test@example.com',
